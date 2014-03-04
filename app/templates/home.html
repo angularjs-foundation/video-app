@@ -2,14 +2,6 @@
   <header class="nt-panel-heading nt-primary-heading row">
     <h5 class="nt-heading col-md-6">
       Videos
-      <span ng-switch="searchMethod">
-        <span ng-switch-when="category">
-          within the <strong>"{{ searchTerm }}"</strong> category
-        </span>
-        <span ng-switch-when="query">
-          matching <strong>"{{ searchTerm }}"</strong>
-        </span>
-      </span>
     </h5>
 
     <div ng-controller="CategoryListCtrl" class="nt-categories-list nt-panel-actions col-md-6">
@@ -33,7 +25,7 @@
   <div class="nt-panel-content">
     <div class="nt-videos-list row nt-grid">
       <div ng-include="tpl('video-listing')"
-           ng-repeat="video in videos | limit:24"
+           ng-repeat="video in videos | limit:24 | filter:q"
            class="nt-videos-list-entry col repeater"
            ng-class="{
             'detail-layout col-md-6'  : isLayout('details'),

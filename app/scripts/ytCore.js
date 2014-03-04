@@ -1,202 +1,1495 @@
-var BASE_TEN = 10;
-
 angular.module('ytCore', [])
+  .value('ytCoreMockedVideos',
+      [{"id":"i9MHigUZKEM",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/i9MHigUZKEM/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/i9MHigUZKEM/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Fundamentals In 60-ish Minutes",
+        "description":"For more articles and videos subscribe to my YouTube channel or visit http://weblogs.asp.net/dwahlin. In this video you'll learn how to get started with the ...",
+        "rating":4,
+        "keywords":{
 
-  .constant('YT_VIDEO_URL', 'https://gdata.youtube.com/feeds/api/videos/{ID}?v=2&alt=json&callback=JSON_CALLBACK')
-  .constant('YT_VIDEO_COMMENTS_URL',   'https://gdata.youtube.com/feeds/api/videos/{ID}/comments?v=2&alt=json&callback=JSON_CALLBACK')
-  .constant('YT_SEARCH_URL', 'https://gdata.youtube.com/feeds/api/videos/?v=2&alt=json&callback=JSON_CALLBACK')
-  .constant('YT_RELATED_URL', 'https://gdata.youtube.com/feeds/api/videos/{ID}/related?v=2&alt=json&callback=JSON_CALLBACK')
+        },
+        "embedUrl":"http://www.youtube.com/embed/i9MHigUZKEM?autoplay=1"
+     },
+     {
+        "id":"ec99SDwSyeI",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/ec99SDwSyeI/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ec99SDwSyeI/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Fundamentals for Rapid HTML5 Development",
+        "description":"AngularJS is a hybrid HTML/JavaScript framework that drastically simplifies building web applications against RESTful web services. Join Nick Van Weerdenburg...",
+        "rating":4,
+        "keywords":{
 
-  .constant('YT_POPULAR_URL', 'https://gdata.youtube.com/feeds/api/standardfeeds/{FEED}?alt=json&callback=JSON_CALLBACK')
-  .constant('YT_EMBED_URL',   'http://www.youtube.com/embed/{ID}?autoplay=1')
-  .constant('YT_POSTER_URL',   'https://i1.ytimg.com/vi/{ID}/hqdefault.jpg')
+        },
+        "embedUrl":"http://www.youtube.com/embed/ec99SDwSyeI?autoplay=1"
+     },
+     {
+        "id":"8ILQOFAgaXE",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8ILQOFAgaXE/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Introduction to Angular JS",
+        "description":"Walk through building a sample application with AngularJS to learn some of the basics along with some commentary that contrasts it with jQuery / Backbone.JS ...",
+        "rating":4,
+        "keywords":{
 
-  .config(['$sceDelegateProvider', function($sceDelegateProvider) {
-    $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://www.youtube.com/**']);
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/8ILQOFAgaXE?autoplay=1"
+     },
+     {
+        "id":"HCR7i5F5L8c",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/HCR7i5F5L8c/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Google I/O 2013 - Design Decisions in AngularJS",
+        "description":"Brad Green, Miško Hevery We'll cover the design decisions that drove creating AngularJS, the JavaScript framework that combines data binding, reusable compon...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytFeed', ['ytVideos', 'YT_POPULAR_URL',
-              function(ytVideos,   YT_POPULAR_URL) {
-    return function(feed) {
-      var url = YT_POPULAR_URL.replace('{FEED}', feed);
-      return ytVideos(url);
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/HCR7i5F5L8c?autoplay=1"
+     },
+     {
+        "id":"tnXO-i7944M",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/tnXO-i7944M/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/tnXO-i7944M/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Dan Wahlin - AngularJS in 20ish Minutes - NG-Conf 2014",
+        "description":"www.ng-conf.org ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to ...",
+        "rating":4,
+        "keywords":{
 
-  .value('ytSearchParams', function(baseUrl, params) {
-    var attrs = '';
-    angular.forEach(params, function(value, key) {
-      if(!value || value.length === 0) {
-        return;
-      }
+        },
+        "embedUrl":"http://www.youtube.com/embed/tnXO-i7944M?autoplay=1"
+     },
+     {
+        "id":"9TylaL_cRFA",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/9TylaL_cRFA/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/9TylaL_cRFA/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"HTML5DevConf: Alicia Liu \"Levelling Up in AngularJS\"",
+        "description":"Levelling Up in AngularJS Time: Tuesday @ 4:00pm | Room E-131 http://html5devconf.com/index.html #HTML5DevConf After you've developed that first demo app usi...",
+        "rating":5,
+        "keywords":{
 
-      var attr;
-      switch(key) {
-      case 'q':
-        attr = 'q';
-        break;
+        },
+        "embedUrl":"http://www.youtube.com/embed/9TylaL_cRFA?autoplay=1"
+     },
+     {
+        "id":"wVntVkRLR3M",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/wVntVkRLR3M/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/wVntVkRLR3M/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Daniel Zen - Using AngularJS to create iPhone & Android applications with PhoneGap - NG-Conf 2014",
+        "description":"www.ng-conf.org ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to ...",
+        "rating":4,
+        "keywords":{
 
-      case 'c':
-        attr = 'category';
-        break;
+        },
+        "embedUrl":"http://www.youtube.com/embed/wVntVkRLR3M?autoplay=1"
+     },
+     {
+        "id":"QETUuZ27N0w",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/QETUuZ27N0w/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/QETUuZ27N0w/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Learn Angular.js in 30 Min! - Angular Tutorial for Beginners using UI-Router",
+        "description":"Working Code Sample on Plunkr: http://plnkr.co/tZg6EfbMCJX1MLtUAcb1 This tutorial will teach you how to build a single page javascript application using Angu...",
+        "rating":4,
+        "keywords":{
 
-      case 'o':
-        attr = 'orderby';
-        break;
+        },
+        "embedUrl":"http://www.youtube.com/embed/QETUuZ27N0w?autoplay=1"
+     },
+     {
+        "id":"8uj7YSqby7s",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/8uj7YSqby7s/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/8uj7YSqby7s/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Realtime \"Eye Candy\" with AngularJS",
+        "description":"Learn how to make a fully interactive, realtime AngularJS application with snappy animation effects, sleek performance and clean, organized code. Top that of...",
+        "rating":4,
+        "keywords":{
 
-      default:
-        return;
-      }
-      attrs += (baseUrl.indexOf('?') === -1 ? '?' : '&') + attr + '=' + value;
-    });
-    return baseUrl + attrs;
-  })
+        },
+        "embedUrl":"http://www.youtube.com/embed/8uj7YSqby7s?autoplay=1"
+     },
+     {
+        "id":"hC0MpgUoui4",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/hC0MpgUoui4/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/hC0MpgUoui4/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Lukas Rubbelke & Matias Niemela - Awesome Interfaces with AngularJS Animations - NG-Conf 2014",
+        "description":"www.ng-conf.org ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to ...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytSearch', ['ytVideos', 'ytSearchParams', 'YT_SEARCH_URL',
-                function(ytVideos,   ytSearchParams,   YT_SEARCH_URL) {
-    return function(data) {
-      data = typeof data === 'string' ?
-        { q : data } :
-        data;
+        },
+        "embedUrl":"http://www.youtube.com/embed/hC0MpgUoui4?autoplay=1"
+     },
+     {
+        "id":"rAyEGv67P-U",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/rAyEGv67P-U/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/rAyEGv67P-U/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"5. AngularJS Fundamentals in 60 Minutes - Modules, Routes and Factories",
+        "description":"Note: If you're on AngularJS 1.2+ routing has changed somewhat. Check out my blog post at http://weblogs.asp.net/dwahlin/archive/2013/08/14/angularjs-routing...",
+        "rating":4,
+        "keywords":{
 
-      var url = ytSearchParams(YT_SEARCH_URL, data);
-      return ytVideos(url);
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/rAyEGv67P-U?autoplay=1"
+     },
+     {
+        "id":"ersEb9vTX3Y",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ersEb9vTX3Y/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Re-Imagining the Browser with AngularJS",
+        "description":"Miško Hevery says, that while most users are happy with the current state of web apps, most developers aren't. From a desire to make more dynamic application...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytRelatedVideos', ['ytVideos', 'YT_RELATED_URL',
-                       function(ytVideos,   YT_RELATED_URL) {
-    return function(videoID) {
-      return ytVideos(YT_RELATED_URL.replace('{ID}', videoID));
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/ersEb9vTX3Y?autoplay=1"
+     },
+     {
+        "id":"WuiHuZq_cg4",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/WuiHuZq_cg4/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Tutorial",
+        "description":"A video tutorial to help you get started with AngularJS. You can play around with the final result in the following jsfiddle: http://jsfiddle.net/johnlindqui...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytVideos', ['$q', '$http', 'ytVideoPrepare',
-                function($q,   $http,   ytVideoPrepare) {
-    return function(url) {
-      var defer = $q.defer();
-      $http.jsonp(url)
-        .success(function(response) {
-          var results = [];
-          angular.forEach(response.feed.entry, function(entry) {
-            results.push(ytVideoPrepare(entry));
-          });
-          defer.resolve(results);
-        })
-        .error(function() {
-          return 'failure';
-        });
-      return defer.promise;
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/WuiHuZq_cg4?autoplay=1"
+     },
+     {
+        "id":"W13qDdJDHp8",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/W13qDdJDHp8/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/W13qDdJDHp8/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS 1.2 and Beyond",
+        "description":"Angular 1.2 has been long in making, but it's finally here! Join us to learn what's new and noteworthy in this feature-packed release as well as what's next ...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytVideo', ['$q', '$http', 'ytVideoPrepare', 'YT_VIDEO_URL',
-               function($q,   $http,   ytVideoPrepare,   YT_VIDEO_URL) {
+        },
+        "embedUrl":"http://www.youtube.com/embed/W13qDdJDHp8?autoplay=1"
+     },
+     {
+        "id":"Iw-3qgG_ipU",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/Iw-3qgG_ipU/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Dean Sofer - AngularJS ORM - NG-Conf 2014",
+        "description":"www.ng-conf.org ng-conf is a two day, single track conference focused on delivering the highest quality training in the Angular JavaScript framework. 500 to ...",
+        "rating":4,
+        "keywords":{
 
-    return function(id) {
-      var defer = $q.defer();
-      var url = YT_VIDEO_URL.replace('{ID}', id);
-      $http.jsonp(url)
-        .success(function(response) {
-          defer.resolve(ytVideoPrepare(response.entry));
-        })
-        .error(function() {
-          return 'failure';
-        });
-      return defer.promise;
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/Iw-3qgG_ipU?autoplay=1"
+     },
+     {
+        "id":"ZhfUv0spHCY",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/ZhfUv0spHCY/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS MTV Meetup: Best Practices (2012/12/11)",
+        "description":"http://www.meetup.com/AngularJS-MTV/events/93943412/ Presentation slides available at: http://goo.gl/CD0Is Live from the Mountain View, CA meetup, Miško Heve...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytVideoPrepare', ['ytCreateEmbedURL',
-                      function(ytCreateEmbedURL) {
-    return function(entry) {
-      var $media      = entry.media$group;
-      var id          = $media.yt$videoid.$t;
-      var thumbnails  = [];
+        },
+        "embedUrl":"http://www.youtube.com/embed/ZhfUv0spHCY?autoplay=1"
+     },
+     {
+        "id":"mMxQHmvQ1pA",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/mMxQHmvQ1pA/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Create an AngularJS Loading Indicator",
+        "description":"Loading data takes time - let your user know. Working example: http://plnkr.co/edit/30qbDj0xuBESp6LT8etM =========================================== **Like w...",
+        "rating":5,
+        "keywords":{
 
-      var hqVideo;
-      angular.forEach($media.media$thumbnail || [], function(thumb) {
-        var image = {
-          width : thumb.width,
-          height : thumb.height,
-          url : thumb.url,
-          name : thumb.yt$name
-        };
-        if(image.name === 'hqdefault') {
-          hqVideo = hqVideo || image;
-        }
-        thumbnails.push(image);
-      });
+        },
+        "embedUrl":"http://www.youtube.com/embed/mMxQHmvQ1pA?autoplay=1"
+     },
+     {
+        "id":"GaX9D1LmKZo",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/GaX9D1LmKZo/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Re Imagining the Browser with AngularJS",
+        "description":"we subscribe all html5 related videos.",
+        "rating":0,
+        "keywords":{
 
-      return {
-        id : id,
-        image : hqVideo || thumbnails[0],
-        thumbnails : thumbnails,
-        title : entry.title.$t,
-        description : $media.media$description.$t,
-        rating : entry.gd$rating ? parseInt(entry.gd$rating.average, BASE_TEN) : 0,
-        keywords : $media.media$keywords || '',
-        embedUrl : ytCreateEmbedURL(id)
-      };
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/GaX9D1LmKZo?autoplay=1"
+     },
+     {
+        "id":"nj6l4_N6qFI",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/nj6l4_N6qFI/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Introducción a AngularJS",
+        "description":"Temas ===== * Historia de HMTL (1989 / 1999 / 2008) * Filosofía de AngularJS * Programación declarativa VS descriptiva * ¿AngularJS vs jQuery? * AngularJs no...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytVideoComments', ['$http', '$q', 'YT_VIDEO_COMMENTS_URL',
-                       function($http,   $q,   YT_VIDEO_COMMENTS_URL) {
-    return function(id) {
-      var url = YT_VIDEO_COMMENTS_URL.replace('{ID}', id);
-      var defer = $q.defer();
-      $http.jsonp(url)
-        .success(function(response) {
-          var comments = [];
-          angular.forEach(response.feed.entry, function(comment) {
-            comments.push({
-              author : comment.author[0].name.$t,
-              content : comment.content.$t
-            });
-          });
-          defer.resolve(comments);
-        })
-        .error(function() {
-          defer.reject();
-        });
-      return defer.promise;
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/nj6l4_N6qFI?autoplay=1"
+     },
+     {
+        "id":"18ifoT-Id54",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/18ifoT-Id54/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/18ifoT-Id54/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Security with Angular JS",
+        "description":"A brief look at some common-sense ways that you can secure a web application written with Angular JS and Laravel 4. By watching this screencast you can expec...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytCreateEmbedURL', ['YT_EMBED_URL',
-                        function(YT_EMBED_URL) {
-    return function(id) {
-      return YT_EMBED_URL.replace('{ID}', id);
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/18ifoT-Id54?autoplay=1"
+     },
+     {
+        "id":"aqHBLS_6gF8",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/aqHBLS_6gF8/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS & D3: Directives for Visualizations",
+        "description":"AngularJS & D3: Directives for Visualizations Speaker: Victor Powell (http://vctr.me/), who is publishing an ebook soon with Ari Lerner of ng-newsletter. Ang...",
+        "rating":4,
+        "keywords":{
 
-  .factory('ytCreatePosterUrl', ['YT_POSTER_URL',
-                         function(YT_POSTER_URL) {
-    return function(id) {
-      return YT_POSTER_URL.replace('{ID}', id);
-    };
-  }])
+        },
+        "embedUrl":"http://www.youtube.com/embed/aqHBLS_6gF8?autoplay=1"
+     },
+     {
+        "id":"0r5QvzjjKDc",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/0r5QvzjjKDc/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Directives Tutorial - Part 1 - Demystifying Angular Directives",
+        "description":"AngularJS Directives don't have to be complicated! This quick tutorial will help you learn how to make an Angular directive in no time. Angular.js is a power...",
+        "rating":5,
+        "keywords":{
 
-  .directive('ytVideoPlayer', ['ytCreateEmbedURL', 'ytCreatePosterUrl',
-                       function(ytCreateEmbedURL,   ytCreatePosterUrl) {
-    return {
-      controller: ['$scope', function($scope) {
-        $scope.video_src = ytCreateEmbedURL($scope.video_id);
-        $scope.video_poster = ytCreatePosterUrl($scope.video_id);
-      }],
-      scope: {
-        video_id: '@ytVideoPlayer'
-      },
-      template: '<div class="yt-player-container">' +
-                '  <div ng-if="active">' +
-                '    <iframe ng-src="{{ video_src }}" class="yt-video-player"></iframe>' +
-                '  </div>' +
-                '  <div ng-click="active=true" ng-hide="active" class="yt-video-poster">' +
-                '    <img ng-src="{{ video_poster }}" />' +
-                '    <span class="yt-video-play-button fa fa-play"></span>' +
-                '  </div>' +
-                '</div>',
-      replace: true
-    };
-  }]);
+        },
+        "embedUrl":"http://www.youtube.com/embed/0r5QvzjjKDc?autoplay=1"
+     },
+     {
+        "id":"iCQ3qic_nGg",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/iCQ3qic_nGg/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"Introdução ao AngularJS",
+        "description":"Visando diminuir a iteração manual com elementos HTML DOM, o AngularJS tem o objetivo de tirar esta preocupação do desenvolvedor. Faça o download do video: h...",
+        "rating":4,
+        "keywords":{
+
+        },
+        "embedUrl":"http://www.youtube.com/embed/iCQ3qic_nGg?autoplay=1"
+     },
+     {
+        "id":"A6cJasNBkyI",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/A6cJasNBkyI/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/A6cJasNBkyI/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Factory vs. Service",
+        "description":"When or why to use a factory or a service... or a constant... or a value... =========================================== **Like what you saw? Be sure to SUBSC...",
+        "rating":4,
+        "keywords":{
+
+        },
+        "embedUrl":"http://www.youtube.com/embed/A6cJasNBkyI?autoplay=1"
+     },
+     {
+        "id":"cdG_T6ufcbE",
+        "image":{
+           "width":480,
+           "height":360,
+           "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/hqdefault.jpg",
+           "name":"hqdefault"
+        },
+        "thumbnails":[
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/default.jpg",
+              "name":"default"
+           },
+           {
+              "width":320,
+              "height":180,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/mqdefault.jpg",
+              "name":"mqdefault"
+           },
+           {
+              "width":480,
+              "height":360,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/hqdefault.jpg",
+              "name":"hqdefault"
+           },
+           {
+              "width":640,
+              "height":480,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/sddefault.jpg",
+              "name":"sddefault"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/1.jpg",
+              "name":"start"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/2.jpg",
+              "name":"middle"
+           },
+           {
+              "width":120,
+              "height":90,
+              "url":"https://i.ytimg.com/vi/cdG_T6ufcbE/3.jpg",
+              "name":"end"
+           }
+        ],
+        "title":"AngularJS Promises with $q",
+        "description":"Angular uses a subset of Q called $q for creating promises. =========================================== **Like what you saw? Be sure to SUBSCRIBE for More Vi...",
+        "rating":4,
+        "keywords":{
+
+        },
+        "embedUrl":"http://www.youtube.com/embed/cdG_T6ufcbE?autoplay=1"
+     }]);

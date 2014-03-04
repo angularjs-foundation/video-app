@@ -3,42 +3,40 @@
   <head>
     <title>ng-tube</title>
     <link rel="stylesheet" type="text/css" href="./assets/app.css" />
+    <style>
+body { padding:20px; }
+.info-box { border:1px solid #31708f; padding:20px; }
+    </style>
   </head>
 
-  <body nt-scroll-to-top nt-loading-indicator>
-    <div id="wrapper">
-      <header class="nt-header">
-        <form ng-submit="search()" ng-controller="SearchFormCtrl" class="nt-search-header">
-          <section>
-            <a href="#/" class="fa fa-home nt-nav-icon"></a>
-            <span class="fa fa-search nt-nav-icon nt-search-icon" ng-click="search()"></span>
-            <input type="search" ng-model="q" class="nt-search-input" />
-            <a href="" class="nt-advanced-search-link" ng-click="advanced = advanced ? null : {}">
-              <span class="fa fa-cog"></span>
-              Search Tools
-            </a>
-          </section>
-          <section ng-if="advanced" class="nt-advanced-search-header row">
-            <datalist id="categories" ng-controller="CategoryListCtrl">
-              <option value="{{ category }}" ng-repeat="category in categories" />
-            </datalist>
-            <div class="col-md-4">
-              <input type="text" ng-model="advanced.category" placeholder="Youtube Category" class="form-control" list="categories" />
-            </div>
-            <div class="col-md-4">
-              <select class="form-control" ng-model="advanced.orderby" ng-options="option as option for option in orderingOptions" placeholder="Sorting Options...">
-              </select>
-            </div>
-            <button class="btn btn-default col-md-2">
-              <span class="fa fa-search"></span> Submit Search
-            </button>
-          </section>
-        </form>
-      </header>
-      <main id="view-container" class="nt-view-container">
-        <div ng-view class="nt-view"></div>
-      </main>
+  <body ng-init="greeting = true">
+    <p class="text-info info-box">
+      - Play around with the variables within <strong>ng-init</strong> <br />
+      - See if you can use <strong>ng-click</strong>, <strong>ng-show</strong>, <strong>ng-include</strong> directives also! <br />
+      - Get the form to submit the video into the list of videos.
+    </p>
+
+    <h2 ng-if="greeting">
+      Hello <strong>ng-tube</strong>!
+    </h2>
+
+    <!-- customize the list of videos -->
+    <div ng-init="videos=[]">
+      <p>
+        You have <strong>{{ videos.length }}</strong> videos to watch.
+      </p>
+
+      <!-- register a new video upon submission -->
+      <form ng-submit="...">
+        <input type="text" placeholder="Enter a new movie" ng-model="movie" />
+        <input type="submit" />
+      </form>
+
+      <div ng-repeat="video in videos">
+        {{ video }}
+      </div>
     </div>
+
     <script src="./assets/app.js"></script>
   </body>
 </html>

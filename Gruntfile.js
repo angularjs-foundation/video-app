@@ -70,11 +70,8 @@ module.exports = function(grunt) {
           'bower_components/bootstrap/dist/css/bootstrap.css',
           'bower_components/font-awesome/css/font-awesome.css',
           'bower_components/nprogress/nprogress.css',
-          'app/styles/nprogress-overrides.css',
-          'app/styles/yt.css',
           'bower_components/open-sans-fontface/open-sans.css',
           'app/styles/app.css',
-          'app/styles/animations.css'
         ]
       },
       scripts: {
@@ -85,13 +82,8 @@ module.exports = function(grunt) {
         src: [
           'bower_components/jquery/jquery.js',
           'bower_components/angular/angular.js',
-          'bower_components/angular-route/angular-route.js',
-          'bower_components/angular-animate/angular-animate.js',
-          'bower_components/nprogress/nprogress.js',
           'app/scripts/ytCore.js',
-          'app/scripts/ytCore.js',
-          'app/scripts/ntApp.js',
-          'app/scripts/ntAppAnimations.js'
+          'app/scripts/ntApp.js'
         ]
       },
     },

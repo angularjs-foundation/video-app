@@ -97,9 +97,6 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      options : {
-        livereload: 7777
-      },
       assets: {
         files: ['app/styles/**/*.css','app/scripts/**/*.js'],
         tasks: ['concat']

@@ -1,35 +1,13 @@
-# ng-tube
+# Module 2
 
-A sleek AngularJS Application to browse youtube videos
+## Getting Started
+1. Run `npm install` to install the app.
+2. Run `grunt` to start the application.
 
-## Installation
-
-1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
-
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`
+## Exercises
+1. Play around with the HTML code in `app/index.html`.
+2. Create a module called `ytCore` inside of `app/scripts/ytCore.js`.
+3. Run the tests using `grunt autotest` and complete the code to get this to work.
+   - Attach today's date to `$rootScope.todaysDate` inside of `app/ntApp.js`.
+   - Implement `isWeekend()` properly using `$rootScropt.todaysDate`.
+   - Adjust the version to the one expected in the tests.

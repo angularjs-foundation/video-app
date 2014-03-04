@@ -33,7 +33,3 @@ A sleek AngularJS Application to browse youtube videos
 
 #### Auto watching tests
 `grunt autotest:e2e`
-
-### Coverage Testing
-
-`grunt coverage`

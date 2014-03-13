@@ -1,6 +1,7 @@
 module.exports = function(config) {
   config.set({
     files : [
+      'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-animate/angular-animate.js',

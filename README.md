@@ -1,39 +1,23 @@
-# ng-tube
+# Module 4
 
-A sleek AngularJS Application to browse youtube videos
+## Getting Started
+1. Run `npm install` to install the app.
+2. Run `grunt` to start the application.
 
-## Installation
+## Exercises
 
-1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
+### Watch Page Exercises (watch.html)
+1. Reveal the `title` and `description` components in the watch page.
+2. Setup the template code to display a fallback message if the description is empty.
+3. Write the template code to display a repeated list of the video comments using the scope member: `video_comments`.
+4. Display even and odd colors using `ng-class-even` and `ng-class-odd` on the repeated video_comments element.
+5. Use `ng-include` on the related videos list to render the template for each video. Note that you may use
+`/templates/video-listing.html` or you can create your own template file. Just be sure that ng-include points to the right path to download the file (also remember to use quotes unless you're using a scope variable inside of ng-include).
 
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`
-
-### Coverage Testing
-
-`grunt coverage`
+### Forms exercise
+1. Run the tests using `grunt autotest` and complete the HTML code in the failing test. The HTML template
+code should do the following:
+  - Complete a working first name input complete with ng-model
+  - Complete a working last name input complete with ng-model
+  - Complete a working email input complete with ng-model and an error message
+  - Complete the code inside of FormCtrl to display the error message upon submit.

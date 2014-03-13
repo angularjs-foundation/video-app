@@ -20,8 +20,11 @@
       <div class="row nt-padded">
         <img ng-src="{{ video.image.url }}" class="col-md-4" />
         <div class="nt-video-panel-inner col-md-8">
-          <h4>{{ video.title }}</h4>
-          <p>{{ video.description }}</p>
+          <!-- show the video title here -->
+          <h4>...</h4>
+
+          <!-- show the video desciption here -->
+          <p>...</p>
         </div>
       </div>
 
@@ -29,15 +32,11 @@
         <h5 class="nt-heading col-md-6">
           Comments
         </h5>
-        <div class="nt-video-comments-header col-md-6">
-          <input type="search" ng-model="q" class="col-md-11 form-control" placeholder="Filter comments..." />
-        </div>
       </header>
 
       <div class="nt-video-comments">
-        <div ng-repeat="comment in video_comments | filter:q | limit:12"
-             ng-class-even="'even'"
-             class="nt-video-comment row nt-expand">
+        <!-- setup a repeated list of video comments using video_comment -->
+        <div class="nt-video-comment row nt-expand">
                <strong class="col-md-2">
                  <span class="fa fa-user"></span>
                  {{ comment.author }}:
@@ -55,8 +54,7 @@
 
       <div class="nt-player-videos off">
         <div class="nt-videos-list row nt-grid">
-          <div ng-include="tpl('video-listing')"
-               ng-repeat="video in relatedVideos | limit:14"
+          <div ng-repeat="video in relatedVideos | limit:14"
                class="col-md-6 nt-videos-list-entry thumb-layout">
           </div>
         </div>

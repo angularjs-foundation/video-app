@@ -1,39 +1,12 @@
-# ng-tube
+# Module 5
 
-A sleek AngularJS Application to browse youtube videos
+## Getting Started
+1. Run `npm install` to install the app.
+2. Run `grunt` to start the application.
 
-## Installation
-
-1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
-
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`
-
-### Coverage Testing
-
-`grunt coverage`
+## Exercises
+1. Create a sub service called `appCategories`. Have it inject the `$http` service.
+2. Within `appCategories`, use $http to download the list of categories from `/categories.json`.
+3. Create the feature to allow comments to be removed within `CommentsCtrl` using `removeComment`. Upon removal communicate with the parent controller (`WatchCtrl`) and have it set a scope property to assign. Use the event name `commentRemoved` when communicating between controllers.
+4. In your template code display a message to tell the user when a comment has been removed.
+5. The tests in this example will verify that your code works. Run `grunt autotest` to ensure your code is correct.

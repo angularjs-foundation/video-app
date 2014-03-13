@@ -22,10 +22,15 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
     };
   })
 
-  .value('appCategories', [
-    'funny','programming', 'web development',
-    'music', 'video games'
-  ])
+  //remove this
+  .value('appCategories', function() { })
+
+  //and implement this
+  //.factory('appCategories', function() {
+  //  return function() {
+  //
+  //  }
+  //});
 
   .config(function($routeProvider, TPL_PATH) {
     $routeProvider.when('/',{
@@ -128,7 +133,12 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
 
   .controller('CategoryListCtrl', ['$scope', 'appCategories',
                            function($scope,   appCategories) {
-    $scope.categories = appCategories;
+    var cats = appCategories();
+    if(cats) {
+      cats.then(function(categories) {
+        $scope.categories = categories;
+      });
+    }
   }])
 
   .controller('SearchFormCtrl', ['$scope', '$location',
@@ -168,16 +178,12 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
     ];
   }])
 
-  .controller('WatchCtrl', ['$scope', '$rootScope', '$location',  'videoInstance', 'ytVideoComments', 'TPL_PATH', 'currentVideo', 'ytSearch', 'ytRelatedVideos',
-                    function($scope,   $rootScope,   $location,    videoInstance,   ytVideoComments,   TPL_PATH,   currentVideo,   ytSearch,   ytRelatedVideos) {
+  .controller('WatchCtrl', ['$scope', '$rootScope', '$location',  'videoInstance', 'TPL_PATH', 'currentVideo', 'ytSearch', 'ytRelatedVideos',
+                    function($scope,   $rootScope,   $location,    videoInstance,   TPL_PATH,   currentVideo,   ytSearch,   ytRelatedVideos) {
 
     var videoID = videoInstance.id;
     $scope.video_id = videoID;
     $scope.video = videoInstance;
-
-    ytVideoComments(videoInstance.id).then(function(comments) {
-      $scope.video_comments = comments;
-    });
 
     currentVideo(videoInstance);
 
@@ -189,6 +195,24 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
     $scope.$on('$destroy', function() {
       currentVideo(null);
     });
+
+    //implement a message here to display when a comment has been removed
+    //$scope.$on('...', function() {
+      //$scope.commentRemoved = true;
+    //});
+  }])
+
+  .controller('CommentsCtrl', ['$scope', 'ytVideoComments', 'currentVideo',
+                       function($scope,   ytVideoComments,   currentVideo) {
+    var video = currentVideo();
+    ytVideoComments(video.id).then(function(comments) {
+      $scope.comments = comments;
+    });
+
+    $scope.removeComment = function(comment) {
+      //implement an event to trigger here to tell the parent controller
+      //$scope.$emit('...');
+    };
   }])
 
   .controller('VideoPanelCtrl', ['$scope', 'currentVideo',

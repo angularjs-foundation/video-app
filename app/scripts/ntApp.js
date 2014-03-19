@@ -48,24 +48,31 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
 
   .directive('ntScrollToTop', ['$window', '$rootScope', function($window, $rootScope) {
     return function() {
-      $rootScope.$on('$routeChangeStart', function() {
-        $window.scrollTo(0, 0);
-      });
+      //implement here with $window.scrollTo(0, 0);
     };
   }])
 
-  .directive('ntLoadingIndicator', function() {
-    return function(scope) {
-      NProgress.configure({ ease: 'ease', speed: 500 });
-
-      scope.$on('ntLoadingStart', function() {
-        NProgress.start();
-      });
-      scope.$on('ntLoadingEnd', function() {
-        NProgress.done();
-      });
-    };
+  .service('ntProgress', function() {
+    return NProgress;
   })
+
+  .directive('ntLoadingIndicator', ['ntProgress', function(ntProgress) {
+    return {
+      //implement on within a controller
+      //ntProgress.configure({ ease: 'ease', speed: 500 });
+      //on scope.start() and listen on scope.$on('ntLoadingStart');
+      //ntProgress.start();
+      //on scope.start() and listen on scope.$on('ntLoadingEnd');
+      //ntProgress.done();
+    };
+  }])
+
+  .directive('ntFakeVideo', [function() {
+    return {
+      //implement on using scope : {} and template : '...'
+      //use =var and/or @var to read values off of the attributes
+    };
+  }])
 
   .factory('currentVideo', ['getSet', function(getSet) {
     return getSet();

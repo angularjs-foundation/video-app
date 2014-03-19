@@ -1,39 +1,11 @@
-# ng-tube
+# Module 6
 
-A sleek AngularJS Application to browse youtube videos
+## Getting Started
+1. Run `npm install` to install the app.
+2. Run `grunt` to start the application.
 
-## Installation
-
-1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
-
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`
-
-### Coverage Testing
-
-`grunt coverage`
+## Exercises
+1. Run the tests using `grunt autotest` and complete the JavaScript code to make the test work inside of `scripts/ntApp.js`.
+  - Implement a scrolling directive that contains a scroll event that is fired upon `$routeChangeStart`.
+  - Implement the ntProgress directive functionality that is performed within `ntLoadingIndicator`.
+  - Implement the directive definition properties that `ntFakeVideo` expects to work.

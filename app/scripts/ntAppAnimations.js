@@ -1,4 +1,26 @@
-angular.module('ntAnimations', ['ngAnimate'])
+angular.module('ntAnimations', [])
+
+  .factory('ntAnimator', function() {
+    return {
+      fadeOut : function(element, done) {
+        //call the fadeOut event in jquery
+      },
+      fadeIn : function(element, done) {
+        //call the fadeIn event in jquery
+      }
+    };
+  })
+
+  .animation('.nt-fade', function() {
+    return {
+      enter : function(element, done) {
+        //implement the fade-in animation
+      },
+      leave : function(element, done) {
+        //implement the fade-out animation
+      }
+    }
+  })
 
   .animation('.nt-expand', ['$route', function($route) {
     var formerRoute;

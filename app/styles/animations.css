@@ -19,75 +19,29 @@
   z-index:200;
 }
 
-@keyframes view_enter {
-  0% { left:100%; }
-  30% { left:80%; }
-  100% { left:0; }
-}
-
-@-webkit-keyframes view_enter {
-  0% { left:100%; }
-  30% { left:80%; }
-  100% { left:0; }
-}
+/* implement a keyframe animation here for enter */
+@keyframes view_enter { }
+@-webkit-keyframes view_enter { }
 
 .nt-view.ng-leave {
   -webkit-animation: view_leave 2s;
   animation: view_leave 2s;
 }
 
-@keyframes view_leave {
-  0% { left:0%; }
-  30% { left:20%; }
-  100% { left:-100%; }
-}
+/* implement a keyframe animation here for leave */
+@keyframes view_leave { }
+@-webkit-keyframes view_leave { }
 
-@-webkit-keyframes view_leave {
-  0% { left:0%; }
-  40% { left:-10%; }
-  100% { left:-100%; }
-}
+/* implement a CSS transition animation here for enter */
+.repeater.ng-enter {}
+.repeater.ng-enter.ng-enter-active { }
 
-
+/* implement a CSS transition animation here for leave */
+.repeater.ng-leave { }
+.repeater.ng-leave.ng-leave-active { }
 
 
-
-
-
-
-
-
-.repeater.ng-enter {
-  -webkit-transition:0.2s linear all;
-  transition:0.2s linear all;
-
-  opacity:0;
-  -webkit-transform:scale(1.15)!important;
-  transform:scale(1.15)!important;
-}
-
-.repeater.ng-enter.ng-enter-active {
-  opacity:1;
-  -webkit-transform:scale(1)!important;
-  transform:scale(1)!important;
-}
-
-.repeater.ng-leave {
-  -webkit-transition:0.1s linear all;
-  transition:0.1s linear all;
-
-  opacity:1;
-}
-
-.repeater.ng-leave.ng-leave-active {
-  opacity:0;
-}
-
+/* implement a CSS stagger transition animation here for both enter and leave */
 .repeater.ng-enter-stagger,
 .repeater.ng-leave-stagger {
-  -webkit-transition-delay:0.1s;
-  transition-delay:0.1s;
-
-  -webkit-transition-duration:0;
-  transition-duration:0;
 }

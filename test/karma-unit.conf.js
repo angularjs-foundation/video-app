@@ -5,9 +5,9 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'app/scripts/myApp.js',
+      'app/scripts/ntApp.js',
+      'app/scripts/ntAppAnimations.js',
       'app/scripts/ytCore.js',
-      'app/scripts/app.js',
       'test/unit/**/*.js'
     ],
     basePath: '../',

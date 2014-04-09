@@ -114,13 +114,13 @@ module.exports = function(grunt) {
 
   //installation-related
   grunt.registerTask('install', ['update']);
-  grunt.registerTask('update', ['shell:npm_install', 'shell:fonts', 'concat']);
+  grunt.registerTask('update', ['shell:npm_install', 'concat']);
 
   //defaults
   grunt.registerTask('default', ['dev']);
 
   //development
-  grunt.registerTask('dev', ['update', 'connect:devserver', 'open:devserver', 'watch:assets']);
+  grunt.registerTask('dev', ['update', 'connect:devserver', 'watch:assets']);
 
   //server daemon
   grunt.registerTask('serve', ['connect:webserver']);

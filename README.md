@@ -27,11 +27,3 @@ A sleek AngularJS Application to browse youtube videos
 
 #### Auto watching tests
 `grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`

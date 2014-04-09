@@ -5,7 +5,9 @@ A sleek AngularJS Application to browse youtube videos
 ## Installation
 
 1. `npm install -g grunt-cli`
+1. `npm install -g bower`
 2. `npm install`
+2. `bower install`
 3. `grunt install`
 
 ## Development

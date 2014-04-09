@@ -14,9 +14,6 @@ module.exports = function(grunt) {
           async: true
         }
       },
-      protractor_install: {
-        command: 'node ./node_modules/protractor/bin/webdriver-manager update'
-      },
       npm_install: {
         command: 'npm install'
       },
@@ -43,22 +40,6 @@ module.exports = function(grunt) {
       testserver: {
         options: {
           port: 9999
-        }
-      }
-    },
-
-    protractor: {
-      options: {
-        keepAlive: true,
-        configFile: "./test/protractor.conf.js"
-      },
-      singlerun: {},
-      auto: {
-        keepAlive: true,
-        options: {
-          args: {
-            seleniumPort: 4444
-          }
         }
       }
     },
@@ -100,10 +81,6 @@ module.exports = function(grunt) {
       assets: {
         files: ['app/styles/**/*.css','app/scripts/**/*.js'],
         tasks: ['concat']
-      },
-      protractor: {
-        files: ['app/scripts/**/*.js','test/e2e/**/*.js'],
-        tasks: ['protractor:auto']
       }
     },
 
@@ -130,15 +107,13 @@ module.exports = function(grunt) {
   //single run tests
   grunt.registerTask('test', ['test:unit', 'test:e2e']);
   grunt.registerTask('test:unit', ['karma:unit']);
-  grunt.registerTask('test:e2e', ['connect:testserver','protractor:singlerun']);
 
   //autotest and watch tests
   grunt.registerTask('autotest', ['karma:unit_auto']);
   grunt.registerTask('autotest:unit', ['karma:unit_auto']);
-  grunt.registerTask('autotest:e2e', ['connect:testserver','shell:selenium','watch:protractor']);
 
   //installation-related
-  grunt.registerTask('install', ['update','shell:protractor_install']);
+  grunt.registerTask('install', ['update']);
   grunt.registerTask('update', ['shell:npm_install', 'shell:fonts', 'concat']);
 
   //defaults

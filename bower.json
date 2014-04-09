@@ -2,11 +2,11 @@
   "name": "youtuber-app",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "latest",
-    "angular": "1.2.14",
-    "angular-route": "1.2.14",
-    "angular-animate": "1.2.14",
-    "angular-mocks": "1.2.14",
+    "jquery": "~2.1.0"
+    "angular": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-animate": "1.2.16",
+    "angular-mocks": "1.2.16",
     "bootstrap": "~3.0.2",
     "font-awesome": "~4.0.3",
     "nprogress": "git://github.com/rstacruz/nprogress.git#~0.1.2",

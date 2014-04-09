@@ -38,10 +38,10 @@ describe('FormsExample', function() {
 
     //implement an input that has an email address model
     var errorMessage = 'You did not enter your email address correctly';
-    var html = '<div>' +
+    var html = '<form name="myForm">' +
                '  <input type="email" />' +
                '  <div>' + errorMessage + '</div>' + //enter/remove error message upon validation
-               '</div>'
+               '</form>'
 
 
     var scope = $rootScope.$new();
@@ -62,7 +62,7 @@ describe('FormsExample', function() {
     expect(element.text()).not.toContain(errorMessage);
   }));
 
-  iit('should submit the form properly and tell the page if valid or not', function() {
+  it('should submit the form properly and tell the page if valid or not', function() {
     module(function($controllerProvider) {
       var FormCtrl = ['$scope', function($scope) {
         $scope.onSubmit = function() {

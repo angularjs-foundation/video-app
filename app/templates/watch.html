@@ -34,8 +34,8 @@
         </div>
       </header>
 
-      <div class="nt-video-comments">
-        <div ng-repeat="comment in video_comments | filter:q | limit:12"
+      <div class="nt-video-comments" ng-controller="CommentsCtrl">
+        <div ng-repeat="comment in comments | filter:q | limit:12"
              ng-class-even="'even'"
              class="nt-video-comment row nt-expand">
                <strong class="col-md-2">
@@ -43,6 +43,7 @@
                  {{ comment.author }}:
                </strong>
                <p class="col-md-9">{{ comment.content }}</p>
+               <!-- add a delete button here -->
         </div>
       </div>
     </div>

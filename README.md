@@ -1,7 +1,7 @@
 # Module 7
 
 ## Getting Started
-1. Run `npm install` to install the app.
+1. Run `npm install` and `bower install` to install the app.
 2. Run `grunt` to start the application.
 
 ## Index Page Exercises

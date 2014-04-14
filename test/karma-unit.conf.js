@@ -1,8 +1,8 @@
 module.exports = function(config) {
   config.set({
     files : [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'app/lib/angular/angular.js',
+      'app/lib/angular-mocks/angular-mocks.js',
       'app/scripts/ntApp.js',
       'app/scripts/ytCore.js',
       'test/unit/**/*.js'

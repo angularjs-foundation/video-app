@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Module 4
 
 ## Getting Started
@@ -21,40 +20,3 @@ code should do the following:
   - Complete a working first name input complete with ng-model
   - Complete a working last name input complete with ng-model
   - Complete a working email input complete with ng-model and an error message
-=======
-# ng-tube
-
-A sleek AngularJS Application to browse youtube videos
-
-## Installation
-
-1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
-
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
-
-### End to End Testing (Protractor)
-
-#### Single run tests
-`grunt test:e2e` 
-
-#### Auto watching tests
-`grunt autotest:e2e`
->>>>>>> b97a3ae... Remove JSHint and Coverage Testing

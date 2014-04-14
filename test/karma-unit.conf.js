@@ -5,9 +5,9 @@ module.exports = function(config) {
       'app/lib/angular-route/angular-route.js',
       'app/lib/angular-animate/angular-animate.js',
       'app/lib/angular-mocks/angular-mocks.js',
-      'app/scripts/myApp.js',
+      'app/scripts/ntApp.js',
+      'app/scripts/ntAppAnimations.js',
       'app/scripts/ytCore.js',
-      'app/scripts/app.js',
       'test/unit/**/*.js'
     ],
     basePath: '../',

@@ -96,7 +96,7 @@ module.exports = function(grunt) {
   });
 
   //single run tests
-  grunt.registerTask('test', ['test:unit', 'test:e2e']);
+  grunt.registerTask('test', ['test:unit']);
   grunt.registerTask('test:unit', ['karma:unit']);
 
   //autotest and watch tests

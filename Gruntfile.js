@@ -7,13 +7,6 @@ module.exports = function(grunt) {
       options: {
         stdout: true
       },
-      selenium: {
-        command: './selenium/start',
-        options: {
-          stdout: false,
-          async: true
-        }
-      },
       npm_install: {
         command: 'npm install'
       },
@@ -81,12 +74,6 @@ module.exports = function(grunt) {
       assets: {
         files: ['app/styles/**/*.css','app/scripts/**/*.js'],
         tasks: ['concat']
-      }
-    },
-
-    open: {
-      devserver: {
-        path: 'http://localhost:8888'
       }
     },
 

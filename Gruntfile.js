@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         command: 'npm install'
       },
       fonts: {
-        command: 'cp -R bower_components/open-sans-fontface/fonts app/assets'
+        command: 'cp -R app/lib/open-sans-fontface/fonts app/assets'
       }
     },
 
@@ -55,12 +55,12 @@ module.exports = function(grunt) {
       styles: {
         dest: './app/assets/app.css',
         src: [
-          'bower_components/bootstrap/dist/css/bootstrap.css',
-          'bower_components/font-awesome/css/font-awesome.css',
-          'bower_components/nprogress/nprogress.css',
+          'app/lib/bootstrap/dist/css/bootstrap.css',
+          'app/lib/font-awesome/css/font-awesome.css',
+          'app/lib/nprogress/nprogress.css',
+          'app/lib/open-sans-fontface/open-sans.css',
           'app/styles/nprogress-overrides.css',
           'app/styles/yt.css',
-          'bower_components/open-sans-fontface/open-sans.css',
           'app/styles/app.css',
           'app/styles/animations.css'
         ]
@@ -71,12 +71,11 @@ module.exports = function(grunt) {
         },
         dest: './app/assets/app.js',
         src: [
-          'bower_components/jquery/jquery.js',
-          'bower_components/angular/angular.js',
-          'bower_components/angular-route/angular-route.js',
-          'bower_components/angular-animate/angular-animate.js',
-          'bower_components/nprogress/nprogress.js',
-          'app/scripts/ytCore.js',
+          'app/lib/jquery/jquery.js',
+          'app/lib/angular/angular.js',
+          'app/lib/angular-route/angular-route.js',
+          'app/lib/angular-animate/angular-animate.js',
+          'app/lib/nprogress/nprogress.js',
           'app/scripts/ytCore.js',
           'app/scripts/ntApp.js',
           'app/scripts/ntAppAnimations.js'

@@ -1,10 +1,10 @@
 module.exports = function(config) {
   config.set({
     files : [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'app/lib/angular/angular.js',
+      'app/lib/angular-route/angular-route.js',
+      'app/lib/angular-animate/angular-animate.js',
+      'app/lib/angular-mocks/angular-mocks.js',
       'app/scripts/ntApp.js',
       'app/scripts/ntAppAnimations.js',
       'app/scripts/ytCore.js',

@@ -1,42 +1,48 @@
-<!DOCTYPE html> 
-<html data-ng-app="ntApp">
-  <head>
-    <title>ng-tube</title>
-    <link rel="stylesheet" type="text/css" href="./assets/app.css" />
-    <style>
-body { padding:20px; }
-.info-box { border:1px solid #31708f; padding:20px; }
-    </style>
-  </head>
+<!DOCTYPE html>
+<html ng-app="ntApp">
+    <head>
+        <title>ng-tube</title>
+        <link rel="stylesheet" type="text/css" href="./assets/app.css"/>
+        <style>
+            body {
+                padding: 20px;
+            }
 
-  <body ng-init="greeting = true">
-    <p class="text-info info-box">
-      - Play around with the variables within <strong>ng-init</strong> <br />
-      - See if you can use <strong>ng-click</strong>, <strong>ng-show</strong>, <strong>ng-include</strong> directives also! <br />
-      - Get the form to submit the video into the list of videos.
-    </p>
+            .info-box {
+                border: 1px solid #31708f;
+                padding: 20px;
+            }
+        </style>
+    </head>
 
-    <h2 ng-if="greeting">
-      Hello <strong>ng-tube</strong>!
-    </h2>
+    <body ng-init="greeting = true">
+        <p class="text-info info-box">
+            - Play around with the variables within <strong>ng-init</strong> <br/>
+            - See if you can use <strong>ng-click</strong>, <strong>ng-show</strong>, <strong>ng-include</strong> directives also! <br/>
+            - Get the form to submit the video into the list of videos.
+        </p>
 
-    <!-- customize the list of videos -->
-    <div ng-init="videos=[]">
-      <p>
-        You have <strong>{{ videos.length }}</strong> videos to watch.
-      </p>
+        <h2 ng-if="greeting">
+            Hello <strong>ng-tube</strong>!
+        </h2>
 
-      <!-- register a new video upon submission -->
-      <form ng-submit="">
-        <input type="text" placeholder="Enter a new movie" ng-model="movie" />
-        <input type="submit" />
-      </form>
+        <!-- customize the list of videos -->
+        <div ng-init="videos=[]">
+            <p>
+                You have <strong>{{ videos.length }}</strong> videos to watch.
+            </p>
 
-      <div ng-repeat="video in videos">
-        {{ video }}
-      </div>
-    </div>
+            <!-- register a new video upon submission -->
+            <form ng-submit="">
+                <input type="text" placeholder="Enter a new movie" ng-model="movie"/>
+                <input type="submit"/>
+            </form>
 
-    <script src="./assets/app.js"></script>
-  </body>
+            <div ng-repeat="video in videos">
+                {{ video }}
+            </div>
+        </div>
+
+        <script src="./assets/app.js"></script>
+    </body>
 </html>

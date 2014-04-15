@@ -5,10 +5,18 @@
 2. Run `grunt` to start the application.
 
 ## Exercises
-1. Add a new route to the page called which uses `WatchCtrl`.
-2. Create a new controller and apply a search filter to the video results on the home page.
-3. Run the tests using `grunt autotest` and complete the code to get this to work.
-   - Create `SearchCtrl` and expose `search()` a scope member.
-   - Ensure that the new route for WatchCtrl controller works.
-   - Ensure that the `videoSrc` property is set on the WatchCtrl controller.
-   - Implement the `limit` filter to limit properties with a given number.
+Run the tests using `grunt test` and complete the exercises until all tests are passing.
+
+### M3.1 Your First Controller
+Create a controller and call it `SearchCtrl` in `ntApp.js`
+
+### M3.2 Methods and Properties on $scope
+In the `SearchCtrl` expose `search()` a scope member.
+
+Fix the url variable so that the `videoSrc` property is correct.
+
+### M3.3 Routes and Controllers
+Add a new route to the page called which uses `WatchCtrl`.
+
+### BONUS Filters
+Implement the `limit` filter to limit properties with a given number.

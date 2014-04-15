@@ -5,7 +5,7 @@
 2. Run `grunt` to start the application.
 
 ## Exercises
-Run the tests using `grunt autotest` and complete the exercises until all tests are passing.
+Run the tests using `grunt test` and complete the exercises until all tests are passing.
 
 ### M2.1 Your First Module
 Create a module called `ytCore` inside of `app/scripts/ytCore.js`.

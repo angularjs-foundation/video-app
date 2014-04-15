@@ -1,65 +1,70 @@
 <section class="nt-panel">
-  <header class="nt-panel-heading nt-primary-heading">
-    <h5 class="nt-heading">
-      {{ video.title }}
-    </h5>
-  </header>
-
-  <div class="nt-player-panel">
-    <div class="nt-player" yt-video-player="{{ video_id }}"></div>
-  </div>
-
-  <div class="row nt-grid">
-    <div class="col-md-8 col">
-      <header class="nt-panel-heading">
+    <header class="nt-panel-heading nt-primary-heading">
         <h5 class="nt-heading">
-          Video Info
+            {{ video.title }}
         </h5>
-      </header>
+    </header>
 
-      <div class="row nt-padded">
-        <img ng-src="{{ video.image.url }}" class="col-md-4" />
-        <div class="nt-video-panel-inner col-md-8">
-          <!-- show the video title here -->
-          <h4>...</h4>
-
-          <!-- show the video desciption here -->
-          <p>...</p>
-        </div>
-      </div>
-
-      <header class="nt-panel-heading row sub-heading">
-        <h5 class="nt-heading col-md-6">
-          Comments
-        </h5>
-      </header>
-
-      <div class="nt-video-comments">
-        <!-- setup a repeated list of video comments using video_comment -->
-        <!-- ng-include="/templates/video-listing.html" can be used here -->
-        <div class="nt-video-comment row nt-expand">
-               <strong class="col-md-2">
-                 <span class="fa fa-user"></span>
-                 {{ comment.author }}:
-               </strong>
-               <p class="col-md-9">{{ comment.content }}</p>
-        </div>
-      </div>
+    <div class="nt-player-panel">
+        <div class="nt-player" yt-video-player="{{ video_id }}"></div>
     </div>
-    <div ng-controller="VideoPanelCtrl" class="nt-video-panel col-md-4 col">
-      <header class="nt-panel-heading">
-        <h5 class="nt-heading">
-          Related Videos
-        </h5>
-      </header>
 
-      <div class="nt-player-videos off">
-        <div class="nt-videos-list row nt-grid">
-          <div ng-repeat="video in relatedVideos | limit:14"
-               class="col-md-6 nt-videos-list-entry thumb-layout">
-          </div>
+    <div class="row nt-grid">
+        <div class="col-md-8 col">
+            <header class="nt-panel-heading">
+                <h5 class="nt-heading">
+                    Video Info
+                </h5>
+            </header>
+
+            <div class="row nt-padded">
+                <img ng-src="{{ video.image.url }}" class="col-md-4"/>
+
+                <div class="nt-video-panel-inner col-md-8">
+                    <!-- [ M4.1] Display the `title` property. -->
+                    <h4>...</h4>
+
+                    <!-- [ M4.1] Display the `description` property. -->
+                    <!-- [ M4.1] Setup the template code to display a fallback message if `description` is empty. -->
+                    <p>...</p>
+                </div>
+            </div>
+
+            <header class="nt-panel-heading row sub-heading">
+                <h5 class="nt-heading col-md-6">
+                    Comments
+                </h5>
+            </header>
+
+            <div class="nt-video-comments">
+                <!-- [M4.1] Display a repeated list of the video comments using the scope member: `video_comments`. -->
+                <!-- [M4.3] Display even and odd colors using `ng-class-even` and `ng-class-odd` on the repeated `video_comments` element -->
+                <div class="nt-video-comment row nt-expand">
+                    <strong class="col-md-2">
+                        <span class="fa fa-user"></span>
+                        {{ comment.author }}:
+                    </strong>
+
+                    <p class="col-md-9">{{ comment.content }}</p>
+                </div>
+            </div>
         </div>
-      </div>
+        <div ng-controller="VideoPanelCtrl" class="nt-video-panel col-md-4 col">
+            <header class="nt-panel-heading">
+                <h5 class="nt-heading">
+                    Related Videos
+                </h5>
+            </header>
+
+            <div class="nt-player-videos off">
+                <div class="nt-videos-list row nt-grid">
+                    <div ng-repeat="video in relatedVideos | limit:14"
+                         class="col-md-6 nt-videos-list-entry thumb-layout">
+                        <!-- [M4.1] Use `ng-include` on the related videos list to render the template for each video. -->
+                        <!-- HINT: ng-include="/templates/video-listing.html" can be used here -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

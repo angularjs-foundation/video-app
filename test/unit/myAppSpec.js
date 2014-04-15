@@ -2,7 +2,7 @@ describe('FormsExample', function() {
 
   it('should have a first_name model', inject(function($compile, $rootScope) {
 
-    //implement an input that has a first name model
+    // [BONUS] Complete a working first name input complete with ng-model
     var html = '<input type="text" />'
 
 
@@ -19,7 +19,7 @@ describe('FormsExample', function() {
 
   it('should have a last_name model', inject(function($compile, $rootScope) {
 
-    //implement an input that has a last name model
+    // [BONUS] Complete a working last name input complete with ng-model
     var html = '<input type="text" />'
 
 
@@ -36,7 +36,7 @@ describe('FormsExample', function() {
 
   it('should have an email address with an error message', inject(function($compile, $rootScope) {
 
-    //implement an input that has an email address model
+    // [BONUS] Complete a working email input complete with ng-model and an error message
     var errorMessage = 'You did not enter your email address correctly';
     var html = '<form name="myForm">' +
                '  <input type="email" />' +

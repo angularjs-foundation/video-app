@@ -11,7 +11,7 @@ Run the tests using `grunt test` and complete the exercises until all tests are 
 Create a sub service called `appCategories` in `ntApp.js` and inject the `$http` service.
 
 ### M5.2 $http
-Within `appCategories`, use $http to download the list of categories from `/categories.json`.
+Within `appCategories`, use `$http` to download the list of categories from `/categories.json`.
 
 ### M5.3 Communicating with Controllers
 In `ntApp.js`, complete `removeComment` in `CommentsCtrl` so that comments can be removed.

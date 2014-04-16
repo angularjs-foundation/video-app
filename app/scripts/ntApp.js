@@ -18,7 +18,7 @@ angular.module('ntApp', ['ytCore', 'ngRoute'])
             templateUrl: TPL_PATH + '/home.html'
         });
 
-        // [M3.3] Add a new route to the page called which uses `WatchCtrl`.
+        // [M3.3] Add a new route to the page called which uses `WatchCtrl` and the `watch.html` template.
         // HINT $routeProvider.when('...', {});
 
         $routeProvider.otherwise({

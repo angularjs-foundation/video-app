@@ -16,7 +16,7 @@ In the `SearchCtrl` expose `search()` a scope member.
 Fix the url variable so that the `videoSrc` property is correct.
 
 ### M3.3 Routes and Controllers
-Add a new route to the page called which uses `WatchCtrl`.
+Add a new route to the page called which uses `WatchCtrl` and the `watch.html` template.
 
 ### BONUS Filters
 Implement the `limit` filter to limit properties with a given number.

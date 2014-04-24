@@ -19,6 +19,9 @@ Use `ng-include` on the related videos list to render the template for each vide
 HINT You may use `/templates/video-listing.html` or you can create your own template file. Just be sure that ng-include points to the right path to download the file (also remember to use quotes unless you're using a scope variable inside of ng-include).
 
 ### M4.2 Event Directives
+See the two icons beside the search bar for the home page? Goto `app/templates/home.html` and
+use `ng-click` to change the layout when clicked. The icon on the left should run
+`setLayout('details')` and the other should run `setLayout('pictures')`.
 
 ### M4.3 Styling Directives
 Display even and odd colors using `ng-class-even` and `ng-class-odd` on the repeated `video_comments` element (you can the pre-made 'even' class if you want)...

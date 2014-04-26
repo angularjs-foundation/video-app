@@ -1,23 +1,25 @@
+// [M7.1] Add the ngAnimate module
 angular.module('ntAnimations', [])
 
   .factory('ntAnimator', function() {
     return {
       fadeOut : function(element, done) {
-        //call the fadeOut event in jquery
+        //[M7.4] call the fadeOut event in jquery
       },
       fadeIn : function(element, done) {
-        //call the fadeIn event in jquery
+        //[M7.4] call the fadeIn event in jquery
       }
     };
   })
 
+  //[M7.4] inject the ntAnimator service
   .animation('.nt-fade', function() {
     return {
       enter : function(element, done) {
-        //implement the fade-in animation
+        //[M7.4] call ntAnimator.fadeIn(element, done);
       },
       leave : function(element, done) {
-        //implement the fade-out animation
+        //[M7.4] call ntAnimator.fadeOut(element, done);
       }
     }
   })

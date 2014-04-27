@@ -70,40 +70,32 @@ describe('ntApp', function() {
 
   describe('ntFakeVideo', function() {
 
-    var element, outerScope, innerScope, html;
+    var element, scope, html;
     beforeEach(inject(function($compile, $rootScope) {
-      html = '<div nt-fake-video video-id="{{ id }}" video-name="name"></div>';
-      outerScope = $rootScope.$new();
-      element = $compile(html)(outerScope);
-      innerScope = angular.element(element).isolateScope();
+      html = '<div nt-fake-video video-id="id" video-name="name"></div>';
+      scope = $rootScope.$new();
+      scope.id = '123';
+      scope.name = 'my-video';
+      scope.description = 'a description about the video';
+      element = $compile(html)(scope);
     }));
 
     it('should use an inline template that contains a video tag', inject(function() {
-      outerScope.$apply();
-      expect(element[0].outerHtml).toContain('<video');
+      scope.$apply();
+      expect(element[0].outerHTML).toContain('<video');
     }));
 
-    it('should bind the video tag video-id attribute value to the scope value', inject(function() {
-      expect(html).toContain('video-id="{{ id }}"');
-
-      outerScope.$apply(function() {
-        outerScope.id = '123';
-      });
-
-      expect(innerScope.videoId).toBe('123');
-    }));
-
-    it('should bind the video tag video-name to the scope as the scope value (without {{ }})',      
-      inject(function() {
-
-      //no curly braces
+    it('should bind the video tag video-id and name attributes value to the scope', inject(function() {
+      expect(html).toContain('video-id="id"');
       expect(html).toContain('video-name="name"');
 
-      outerScope.$apply(function() {
-        outerScope.name = 'my-video';
-      });
+      expect(scope.videoId).toBe('123');
+      expect(scope.videoName).toBe('my-video');
+    }));
 
-      expect(innerScope.videoName).toBe('my-video');
+    it('should place a description on the video element\'s alt attribute', inject(function() {
+      expect(html).not.toContain('alt');
+      expect(element.find('video').attr('alt')).toContain('a description about the video');
     }));
   });
 });

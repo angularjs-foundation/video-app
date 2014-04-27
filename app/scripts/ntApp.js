@@ -49,8 +49,7 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
     .directive('ntScrollToTop', ['$window', '$rootScope', function ($window, $rootScope) {
         return function () {
             // [M6.1] Create a listener for the `$routeChangeStart` event in `ntScrollToTop`.
-
-            // [M6.1] Add the code to scroll to the top of the page when `$routeChangeStart` is fired.
+            // Add the code to scroll to the top of the page when `$routeChangeStart` is fired.
             // HINT $window.scrollTo(0, 0);
         };
     }])
@@ -71,12 +70,19 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
     }])
 
     .directive('ntFakeVideo', [function () {
-        // [M6.2] Create a directive definition object (DDO) on `ntFakeVideo`.
-
-        // [M6.2] Add a `template` property to the DDO to define the markup for `ntFakeVideo`.
-
-        // [M6.2] Create a directive definition object (DDO) on `ntFakeVideo`.
-        // HINT Use '=var and/or @var to read values off of the attributes
+      return {
+        template : '', // [M6.2] Add a `template` property to the DDO to define the markup for `ntFakeVideo`.
+        controller : function($scope, $attrs) {
+          // [M6.4] Read videoId and videoName from $attrs and place that on the scope as
+          // `videoId` and `videoName`.
+          // HINT: use $scope.$eval(...)
+          $scope.videoId = '...';
+          $scope.videoName = '...';
+        }
+        // [M6.3] Create a link function. When the function is run, then get ahold
+        // of the created video element and modify the alternative text (alt="")
+        // attribute and place a description read from `$scope.description` as its value.
+      }
     }])
 
     .factory('currentVideo', ['getSet', function (getSet) {

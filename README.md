@@ -1,27 +1,14 @@
-# ng-tube
+# AngularJS Foundation - Video Application
 
 A sleek AngularJS Application to browse youtube videos
+
+## Branches
+
+Each branch represents the module with the AngularJS Foundation application exercises.
 
 ## Installation
 
 1. `npm install -g grunt-cli`
-2. `npm install`
-3. `grunt install`
-
-## Development
-
-1. `grunt dev`
-2. Go to: `http://localhost:8888`
-
-## Testing
-
-### Run all tests with
-`grunt test` 
-
-### Unit Testing
-
-#### Single run tests
-`grunt test:unit` 
-
-#### Auto watching tests
-`grunt autotest:unit`
+2. `npm install -g grunt`
+3. `npm install`
+4. `grunt install`

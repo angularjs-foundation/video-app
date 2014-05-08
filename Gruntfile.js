@@ -37,43 +37,23 @@ module.exports = function(grunt) {
       }
     },
 
-    concat: {
-      styles: {
-        dest: './app/assets/app.css',
-        src: [
-          'app/lib/bootstrap/dist/css/bootstrap.css',
-          'app/lib/font-awesome/css/font-awesome.css',
-          'app/lib/nprogress/nprogress.css',
-          'app/styles/nprogress-overrides.css',
-          'app/styles/yt.css',
-          'app/lib/open-sans-fontface/open-sans.css',
-          'app/styles/app.css',
-          'app/styles/animations.css'
-        ]
-      },
-      scripts: {
-        options: {
-          separator: ';'
-        },
-        dest: './app/assets/app.js',
-        src: [
-          'app/lib/jquery/jquery.js',
-          'app/lib/angular/angular.js',
-          'app/lib/angular-route/angular-route.js',
-          'app/lib/angular-animate/angular-animate.js',
-          'app/lib/nprogress/nprogress.js',
-          'app/scripts/ytCore.js',
-          'app/scripts/ytCore.js',
-          'app/scripts/ntApp.js',
-          'app/scripts/ntAppAnimations.js'
-        ]
-      },
+    useminPrepare: {
+      html: 'app/index.html',
+      options: {
+        dest: 'build'
+      }
     },
 
-    watch: {
-      assets: {
-        files: ['app/styles/**/*.css','app/scripts/**/*.js'],
-        tasks: ['concat']
+    usemin: {
+      html: ['build/index.html']
+    },
+
+    copy: {
+      app : {
+        cwd: 'app/',
+        src: ['**'],
+        dest: 'build/',
+        expand: true
       }
     },
 
@@ -101,13 +81,14 @@ module.exports = function(grunt) {
 
   //installation-related
   grunt.registerTask('install', ['update']);
-  grunt.registerTask('update', ['shell:npm_install', 'concat']);
+  grunt.registerTask('update', ['shell:npm_install']);
 
   //defaults
   grunt.registerTask('default', ['dev']);
+  grunt.registerTask('build', ['update', 'copy:app', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
 
   //development
-  grunt.registerTask('dev', ['update', 'connect:devserver', 'watch:assets']);
+  grunt.registerTask('dev', ['serve']);
 
   //server daemon
   grunt.registerTask('serve', ['connect:webserver']);

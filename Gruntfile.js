@@ -37,37 +37,6 @@ module.exports = function(grunt) {
       }
     },
 
-    concat: {
-      styles: {
-        dest: './app/assets/app.css',
-        src: [
-          'app/lib/bootstrap/dist/css/bootstrap.css',
-          'app/lib/font-awesome/css/font-awesome.css',
-          'app/lib/open-sans-fontface/open-sans.css',
-          'app/styles/app.css'
-        ]
-      },
-      scripts: {
-        options: {
-          separator: ';'
-        },
-        dest: './app/assets/app.js',
-        src: [
-          'app/lib/jquery/jquery.js',
-          'app/lib/angular/angular.js',
-          'app/scripts/ytCore.js',
-          'app/scripts/ntApp.js'
-        ]
-      },
-    },
-
-    watch: {
-      assets: {
-        files: ['app/styles/**/*.css','app/scripts/**/*.js'],
-        tasks: ['concat']
-      }
-    },
-
     karma: {
       unit: {
         configFile: './test/karma-unit.conf.js',
@@ -92,13 +61,13 @@ module.exports = function(grunt) {
 
   //installation-related
   grunt.registerTask('install', ['update']);
-  grunt.registerTask('update', ['shell:npm_install', 'concat']);
+  grunt.registerTask('update', ['shell:npm_install']);
 
   //defaults
   grunt.registerTask('default', ['dev']);
 
   //development
-  grunt.registerTask('dev', ['update', 'connect:devserver', 'watch:assets']);
+  grunt.registerTask('dev', ['serve']);
 
   //server daemon
   grunt.registerTask('serve', ['connect:webserver']);

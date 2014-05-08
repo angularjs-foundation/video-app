@@ -5,3 +5,6 @@ bower_components
 /selenium
 /coverage
 /app/assets
+.tmp/
+/dist
+/build

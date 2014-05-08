@@ -1,5 +1,9 @@
 {
   "name": "AngularJS-foundation-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angularjs-foundation/video-app.git"
+  },
   "version": "0.0.1",
   "devDependencies": {
     "grunt-shell": "0.6.4",

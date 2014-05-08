@@ -2,7 +2,12 @@
 <html data-ng-app="ntApp">
   <head>
     <title>ng-tube</title>
-    <link rel="stylesheet" type="text/css" href="./assets/app.css" />
+<!-- build:css assets/app.css -->
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="lib/open-sans-fontface/open-sans.css" />
+<link rel="stylesheet" type="text/css" href="styles/app.css" />
+<!-- endbuild -->
   </head>
 
   <body nt-scroll-to-top nt-loading-indicator>
@@ -20,6 +25,12 @@
         <div ng-view class="nt-view"></div>
       </main>
     </div>
-    <script src="./assets/app.js"></script>
+<!-- build:js assets/app.js -->
+<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="lib/angular/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="scripts/ytCore.js"></script>
+<script type="text/javascript" src="scripts/ntApp.js"></script>
+<!-- endbuild -->
   </body>
 </html>

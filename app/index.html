@@ -28,13 +28,13 @@
         </h2>
 
         <!-- customize the list of videos -->
-        <div ng-init="videos=[]">
+        <div ng-init="videos=['video 1', 'video 2']">
             <p>
                 You have <strong>{{ videos.length }}</strong> videos to watch.
             </p>
 
             <!-- 3) register a new video upon submission -->
-            <form ng-submit="">
+            <form ng-submit="videos.push(movie)">
                 <input type="text" placeholder="Enter a new movie" ng-model="movie"/>
                 <input type="submit"/>
             </form>

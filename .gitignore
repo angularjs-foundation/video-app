@@ -5,3 +5,4 @@ bower_components
 /selenium
 /coverage
 /app/assets
+.idea

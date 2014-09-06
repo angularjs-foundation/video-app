@@ -22,11 +22,12 @@
 
                 <div class="nt-video-panel-inner col-md-8">
                     <!-- [ M4.1] Display the `title` property. -->
-                    <h4>...</h4>
+                    <h4>{{ video.title }}</h4>
 
                     <!-- [ M4.1] Display the `description` property. -->
                     <!-- [ M4.1] Setup the template code to display a fallback message if `description` is empty. -->
-                    <p>...</p>
+                    <p ng-if="video.description">{{ video.description }}</p>
+                    <p ng-if="!video.description">No description available</p>
                 </div>
             </div>
 
@@ -39,7 +40,7 @@
             <div class="nt-video-comments">
                 <!-- [M4.1] Display a repeated list of the video comments using the scope member: `video_comments`. -->
                 <!-- [M4.3] Display even and odd colors using `ng-class-even` and `ng-class-odd` on the repeated `video_comments` element -->
-                <div class="nt-video-comment row nt-expand">
+                <div class="nt-video-comment row nt-expand" ng-class-even="'even'" ng-class-odd="'odd'" ng-repeat="comment in video_comments">
                     <strong class="col-md-2">
                         <span class="fa fa-user"></span>
                         {{ comment.author }}:
@@ -61,7 +62,8 @@
                     <div ng-repeat="video in relatedVideos | limit:14"
                          class="col-md-6 nt-videos-list-entry thumb-layout">
                         <!-- [M4.1] Use `ng-include` on the related videos list to render the template for each video. -->
-                        <!-- HINT: ng-include="/templates/video-listing.html" can be used here -->
+                        <!-- HINT: ng-include="'templates/video-listing.html'" can be used here -->
+                        <div ng-include="'templates/video-listing.html'"></div>
                     </div>
                 </div>
             </div>

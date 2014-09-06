@@ -3,7 +3,7 @@ describe('FormsExample', function() {
   it('should have a first_name model', inject(function($compile, $rootScope) {
 
     // [BONUS] Complete a working first name input complete with ng-model
-    var html = '<input type="text" />'
+    var html = '<input type="text" ng-model="firstName" />'
 
 
     var scope = $rootScope.$new();
@@ -20,7 +20,7 @@ describe('FormsExample', function() {
   it('should have a last_name model', inject(function($compile, $rootScope) {
 
     // [BONUS] Complete a working last name input complete with ng-model
-    var html = '<input type="text" />'
+    var html = '<input type="text" ng-model="lastName" />'
 
 
     var scope = $rootScope.$new();
@@ -39,8 +39,8 @@ describe('FormsExample', function() {
     // [BONUS] Complete a working email input complete with ng-model and an error message
     var errorMessage = 'You did not enter your email address correctly';
     var html = '<form name="myForm">' +
-               '  <input type="email" />' +
-               '  <div>' + errorMessage + '</div>' + //enter/remove error message upon validation
+               '  <input name="email" type="email" ng-model="email" />' +
+               '  <div ng-if="!myForm.email.$valid">' + errorMessage + '</div>' + //enter/remove error message upon validation
                '</form>'
 
 

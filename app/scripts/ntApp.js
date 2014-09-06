@@ -20,6 +20,10 @@ angular.module('ntApp', ['ytCore', 'ngRoute'])
 
         // [M3.3] Add a new route to the page called which uses `WatchCtrl` and the `watch.html` template.
         // HINT $routeProvider.when('...', {});
+        $routeProvider.when('/watch/:id', {
+            controller: 'WatchCtrl',
+            templateUrl: TPL_PATH + '/watch.html'
+        });
 
         $routeProvider.otherwise({
             template: '<h2 class="page-error">Error: Route Not Defined</h2>'
@@ -31,12 +35,17 @@ angular.module('ntApp', ['ytCore', 'ngRoute'])
     }])
 
     // [M3.1] Create a controller and call it `SearchCtrl`
-    // [M3.2] In the `SearchCtrl` expose `search()` a scope member.
+    // [M3.2] In the `SearchCtrl` expose `search()` as a scope member.
+    .controller('SearchCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+        $scope.search = function(q) {
+            $rootScope.q = q;
+        }
+    }])
 
     .filter('limit', function () {
         return function (results, limit) {
             // [BONUS] Implement the `limit` filter to limit properties with a given number.
-            return results;
+            return results.slice(0, limit);
         };
     })
 
@@ -49,7 +58,7 @@ angular.module('ntApp', ['ytCore', 'ngRoute'])
 
         // [M3.2] Fix the url variable so that the `videoSrc` property is correct.
         // HINT Use $routeParams to get the id
-        var url = urlBase.replace('{ID}', '...');
+        var url = urlBase.replace('{ID}', $routeParams.id);
 
         //$sce is used to allow the URL to be exposed in the HTML
         $scope.videoSrc = $sce.trustAsResourceUrl(url);

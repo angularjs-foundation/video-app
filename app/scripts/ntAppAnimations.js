@@ -1,5 +1,5 @@
 // [M7.1] Add the ngAnimate module
-angular.module('ntAnimations', [])
+angular.module('ntAppAnimations', [])
 
   .factory('ntAnimator', function() {
     return {

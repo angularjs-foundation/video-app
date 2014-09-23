@@ -2,14 +2,14 @@ describe('ntApp', function() {
 
   beforeEach(module('ntApp'));
 
-  describe('ntAnimations', function() {
+  describe('ntAppAnimations', function() {
     it('ntApp should depend on the ntAnimations app', function() {
       var m = angular.module('ntApp');
-      expect(m.value('appName').requires).toContain('ntAnimations');
+      expect(m.value('appName').requires).toContain('ntAppAnimations');
     });
 
     it('should depend on ngAnimate', function() {
-      var m = angular.module('ntAnimations');
+      var m = angular.module('ntAppAnimations');
       expect(m.value('appName').requires).toContain('ngAnimate');
     });
   });
@@ -18,7 +18,10 @@ describe('ntApp', function() {
     it('should inject and use the ntAnimator service', function() {
       var injectSpy = jasmine.createSpy();
       module(function($provide) {
-        $provide.factory('ntAnimator', injectSpy);
+        $provide.factory('ntAnimator', function() {
+          injectSpy();
+          return { fadeIn : angular.noop, fadeOut : angular.noop }; 
+        });
       });
       inject(function($compile, $rootScope, $animate, $rootElement) {
         $rootScope.$apply();

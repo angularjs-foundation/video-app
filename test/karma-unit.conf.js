@@ -1,6 +1,7 @@
 module.exports = function(config) {
   config.set({
     files : [
+      'app/lib/jquery/dist/jquery.js',
       'app/lib/angular/angular.js',
       'app/lib/angular-route/angular-route.js',
       'app/lib/angular-animate/angular-animate.js',

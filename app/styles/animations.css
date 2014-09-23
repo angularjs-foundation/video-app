@@ -18,7 +18,6 @@
   z-index:200;
 }
 
-/* implement a keyframe animation here for enter */
 @keyframes view_enter {
   0% { left:100%; }
   30% { left:80%; }
@@ -35,7 +34,6 @@
   /* [M3.3] Add the view_leave keyframe here (remember the -webkit one as well) */
 }
 
-/* implement a keyframe animation here for leave */
 @keyframes view_leave {
   0% { left:0%; }
   30% { left:20%; }
@@ -49,14 +47,11 @@
 }
 
 /* [M3.2] Create a fade-in CSS transition to fade in each of the video items on the screen */
-/* implement a CSS transition animation here for enter */
 .repeater.ng-enter {  }
 .repeater.ng-enter.ng-enter-active {  }
 
-/* implement a CSS fade-out transition animation here for leave */
 .repeater.ng-leave {  }
 .repeater.ng-leave.ng-leave-active {  }
-
 
 /* [M3.3] implement a CSS stagger transition animation here for both enter and leave */
 .repeater.ng-enter-stagger,

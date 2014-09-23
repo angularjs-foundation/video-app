@@ -3,7 +3,7 @@ describe('ntApp', function() {
   beforeEach(module('ntApp'));
 
   describe('ntAppAnimations', function() {
-    it('ntApp should depend on the ntAnimations app', function() {
+    it('ntApp should depend on the ntAppAnimations app', function() {
       var m = angular.module('ntApp');
       expect(m.value('appName').requires).toContain('ntAppAnimations');
     });

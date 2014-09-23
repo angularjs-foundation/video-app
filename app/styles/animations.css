@@ -14,7 +14,8 @@
 }
 
 .nt-view.ng-enter {
-  /* [M3.3] Add the view_enter keyframe here (remember the -webkit one as well) */
+  animation: 0.5s view_enter;
+  -webkit-animation: 0.5s view_enter;
   z-index:200;
 }
 
@@ -31,7 +32,8 @@
 }
 
 .nt-view.ng-leave {
-  /* [M3.3] Add the view_leave keyframe here (remember the -webkit one as well) */
+  animation: 0.5s view_leave;
+  -webkit-animation: 0.5s view_leave;
 }
 
 @keyframes view_leave {
@@ -46,14 +48,16 @@
   100% { left:-100%; }
 }
 
-/* [M3.2] Create a fade-in CSS transition to fade in each of the video items on the screen */
-.repeater.ng-enter {  }
-.repeater.ng-enter.ng-enter-active {  }
+.repeater.ng-enter { opacity:0; transition:0.5s linear all; }
+.repeater.ng-enter.ng-enter-active { opacity:1; }
 
-.repeater.ng-leave {  }
-.repeater.ng-leave.ng-leave-active {  }
+.repeater.ng-leave { opacity:1; transition:0.5s linear all; }
+.repeater.ng-leave.ng-leave-active { opacity:0; }
 
-/* [M3.3] implement a CSS stagger transition animation here for both enter and leave */
 .repeater.ng-enter-stagger,
 .repeater.ng-leave-stagger {
+  transition-delay:0.2s;
+  -webkit-transition-delay:0.2s;
+  transition-duration:0;
+  -webkit-transition-duration:0;
 }

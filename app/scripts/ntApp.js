@@ -1,5 +1,4 @@
-// [M7.1] Add the ntAppAnimations module
-angular.module('ntApp', ['ytCore', 'ngRoute'])
+angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAppAnimations'])
 
   .constant('TPL_PATH', './templates')
 

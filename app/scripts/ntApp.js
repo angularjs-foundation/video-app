@@ -22,16 +22,11 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
         };
     })
 
-    // [M5.1] Create a sub service called `appCategories` and inject the `$http` service.
-    // [M5.2] Within `appCategories`, use $http to download the list of categories from `/categories.json`.
-
-    // remove this
-    .value('appCategories', function () { })
-    // and implement this
-    //.factory('appCategories', function() {
-    //  return function() {
-    //  }
-    //});
+    .factory('appCategories', function($http) {
+      return function() {
+        return $http.get('/categories.json');
+      }
+    })
 
     .config(function ($routeProvider, TPL_PATH) {
         $routeProvider.when('/', {
@@ -137,7 +132,7 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
             var cats = appCategories();
             if (cats) {
                 cats.then(function (categories) {
-                    $scope.categories = categories;
+                    $scope.categories = categories.data;
                 });
             }
         }])
@@ -197,8 +192,9 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
                 currentVideo(null);
             });
 
-            // [M5.3] Listen for the `commentRemoved` event in `WatchCtrl` and update `$scope.commentRemoved` to `true`.
-            // HINT $scope.$on('...');
+            $scope.$on('commentRemoved', function(event) {
+                $scope.commentRemoved = true;
+            });
         }])
 
     .controller('CommentsCtrl', ['$scope', 'ytVideoComments', 'currentVideo',
@@ -208,10 +204,10 @@ angular.module('ntApp', ['ytCore', 'ngRoute', 'ntAnimations'])
                 $scope.comments = comments;
             });
 
-            // [M5.3] Complete `removeComment` in `CommentsCtrl` so that comments can be removed.
             $scope.removeComment = function (comment) {
-                // [M5.3] Upon comment removal, communicate with the parent controller (`WatchCtrl`) using the event name `commentRemoved`.
-                // HINT $scope.$emit('...');
+              $scope.$emit('commentRemoved', comment);
+              var i = $scope.comments.indexOf(comment);
+              $scope.comments.splice(i, 1);
             };
         }])
 

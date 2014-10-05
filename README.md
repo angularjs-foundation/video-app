@@ -3,17 +3,21 @@
 ## Getting Started
 1. Run `npm install` to install the app.
 2. Run `grunt` to start the application.
+3. Visit `http://localhost:8888` to view the website.
 
 ## Exercises
-Run the tests using `grunt test` and complete the exercises until all tests are passing.
+Run the tests using `grunt autotest` or `grunt test` and
+complete the exercises until all tests are passing.
 
 ### M2.1 Your First Module
-Create a module called `ytCore` inside of `app/scripts/ytCore.js`.
+Open up `app/scripts/ytCore.js` and create a module called `ytCore`.
 
 ### M2.2 Module.constant
-Adjust the version number so that the test in `ntAppSpec.js` passes.
+Open up `app/scripts/ntApp.js` and adjust the version number so that the
+test passes.
 
 ### M2.3 Module.run
-Attach today's date to `$rootScope.todaysDate` inside of `app/ntApp.js`.
-
-Implement `isWeekend()` properly using `$rootScope.todaysDate`.
+Open up `app/scripts/ntApp.js` and attach an instance of `new Date()` to
+`$rootScope.todaysDate`. Then complete the code inside of
+`$rootScope.isWeekend` to ensure that it correctly determines if 
+`$rootScope.todaysDate` falls on a weekend.

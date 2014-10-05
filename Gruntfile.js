@@ -3,6 +3,12 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
+    open : {
+      webserver : {
+        path: 'http://localhost:8888/'
+      }
+    },
+
     shell: {
       options: {
         stdout: true
@@ -64,7 +70,7 @@ module.exports = function(grunt) {
   grunt.registerTask('update', ['shell:npm_install']);
 
   //defaults
-  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('default', ['open:webserver', 'dev']);
 
   //development
   grunt.registerTask('dev', ['update', 'serve']);

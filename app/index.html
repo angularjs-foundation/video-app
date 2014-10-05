@@ -14,13 +14,15 @@
         </style>
     </head>
 
+    <!-- 1) play around with the variables below -->
     <body ng-init="greeting = true">
         <p class="text-info info-box">
-            - Play around with the variables within <strong>ng-init</strong> <br/>
-            - See if you can use <strong>ng-click</strong>, <strong>ng-show</strong>, <strong>ng-include</strong> directives also! <br/>
-            - Get the form to submit the video into the list of videos.
+            - 1) Play around with the variables within <strong>ng-init</strong> <br/>
+            - 2) See if you can use <strong>ng-click</strong>, <strong>ng-show</strong>, <strong>ng-include</strong> directives also! <br/>
+            - 3) Get the form to submit the video into the list of videos.
         </p>
 
+        <!-- 2) use ng-click to show and hide the greeting -->
         <h2 ng-if="greeting">
             Hello <strong>ng-tube</strong>!
         </h2>
@@ -31,13 +33,13 @@
                 You have <strong>{{ videos.length }}</strong> videos to watch.
             </p>
 
-            <!-- register a new video upon submission -->
+            <!-- 3) register a new video upon submission -->
             <form ng-submit="">
                 <input type="text" placeholder="Enter a new movie" ng-model="movie"/>
                 <input type="submit"/>
             </form>
 
-            <div ng-repeat="video in videos">
+            <div ng-repeat="video in videos track by $index">
                 {{ video }}
             </div>
         </div>
